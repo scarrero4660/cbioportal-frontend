@@ -1,0 +1,371 @@
+.loginBg {
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/blurred_background.png') no-repeat;
+  background-size: cover;
+  //background:
+  //  radial-gradient(50% 50% at 50% 50%, #FF9838 0%, rgba(255, 152, 56, 0) 100%) top -200px left -90px,
+  //  radial-gradient(50% 50% at 50% 50%, #2E72D2 0%, rgba(46, 114, 210, 0) 100%) bottom -500px right -400px;
+  //background-size: 80vw 80vw;
+  //background-repeat: no-repeat no-repeat;
+  background-color: #112054;
+
+  .frame {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 480px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .card {
+      /* card */
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+
+      position: static;
+      width: 480px;
+      //height: 500px;
+      left: 0px;
+      top: 60px;
+
+      /* surface/default */
+
+      background-color: #FFFFFF;
+      /* card */
+
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      margin-top: 0px;
+
+      .logoContainer {
+        margin-top: 46.25px;
+      }
+
+      .heading {
+        /* heading */
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+
+        position: static;
+        width: 380px;
+        height: 100px;
+        left: 40px;
+        margin-top: 40px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        .signIn {
+          position: static;
+          width: 85px;
+          height: 32px;
+          left: 0px;
+          top: 0px;
+
+          /* Heading */
+
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 21px;
+          line-height: 40px;
+          /* identical to box height, or 152% */
+
+
+          /* text/default */
+
+          color: #202223;
+
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+        }
+
+        .description {
+          /* Use your UHN credentials (T-ID and password) to sign in. */
+
+          height: 34px;
+          left: 0px;
+
+          /* Button */
+
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+
+
+          /* text/default */
+
+          color: #202223;
+
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+          margin-top: 8px;
+
+        }
+      }
+
+      form {
+        /* form */
+        width: 100%;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        .usernameContainer {
+          /* text-field */
+          width: 100%;
+
+          /* Auto layout */
+
+          // display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
+
+          position: static;
+          height: 58px;
+          left: 0px;
+          top: 0px;
+
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+          margin-top: 16px;
+
+          .username {
+
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            /* text/default */
+
+            color: black;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+          }
+
+          .usernameInput {
+            /* text-field */
+            width: 100%;
+            height: 46px;
+
+            /* Auto layout */
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 6px 8px;
+
+            /* surface/default */
+
+            background: #FFFFFF;
+            /* border/default */
+
+            // border: 1px solid #C9CCCF;
+            box-sizing: border-box;
+            border-radius: 6px;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin-top: 4px;
+          }
+        }
+
+        .passwordContainer {
+          /* text-field */
+
+
+          /* Auto layout */
+
+          // display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
+
+          position: static;
+          width: 100%;
+          height: 58px;
+          left: 0px;
+          top: 74px;
+
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+          margin-top: 20px;
+
+          .password {
+            /* Label */
+
+
+            position: static;
+            width: 280px;
+            height: 21px;
+            left: 0px;
+            top: 0px;
+
+            /* Paragraph */
+
+            //font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            /* identical to box height, or 150% */
+
+
+            /* text/default */
+
+            color: #202223;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 4px 0px;
+          }
+
+          .passwordInput {
+            /* text-field */
+            width: 100%;
+            height: 46px;
+
+            /* Auto layout */
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 6px 8px;
+
+            /* surface/default */
+
+            background: #FFFFFF;
+            /* border/default */
+
+            // border: 1px solid #C9CCCF;
+            box-sizing: border-box;
+            border-radius: 6px;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin-top: 4px;
+          }
+        }
+
+
+      }
+
+      button {
+        /* button */
+        height: 46px;
+        margin-top: 43px;
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        order: 2;
+        width: 100%;
+
+        /* primary/default */
+
+        background: #2E72D2;
+        border-radius: 4px;
+
+        /* Inside auto layout */
+
+        flex: none;
+
+        flex-grow: 0;
+      }
+
+
+
+      .forgotPassword {
+        /* Use your UHN credentials (T-ID and password) to sign in. */
+        width: 100%;
+        text-align: center;
+        height: 34px;
+        left: 0px;
+        order: 3;
+        /* Button */
+        margin-top: 20px;
+        cursor: pointer;
+        color: #2E72D2;
+
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+    }
+  }
+}
+
+

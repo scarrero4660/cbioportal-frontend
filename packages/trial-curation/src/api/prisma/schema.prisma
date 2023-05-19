@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model schema_ctml {
+  id        Int      @id @default(autoincrement())
+  version   String   @unique
+  schema    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  trials    trial[]
+}
+
+model ctml_json {
+  id        Int      @id @default(autoincrement())
+  version   String   @unique
+  data      Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  trials    trial[]
+}
+
+model trial {
+  id                     Int           @id @default(autoincrement())
+  nct_id                 String
+  nickname               String?
+  principal_investigator String?
+  status                 status?       @default(DRAFT)
+  ctml_schemas           schema_ctml[]
+  ctml_json              ctml_json?    @relation(fields: [ctml_jsonId], references: [id])
+  createdAt              DateTime      @default(now())
+  updatedAt              DateTime      @updatedAt
+  createdBy              user?         @relation("createdBy", fields: [userId], references: [id])
+  modifiedBy             user?         @relation("modifiedBy", fields: [modifiedById], references: [id])
+  userId                 Int?
+  modifiedById           Int?
+  ctml_jsonId            Int?
+}
+
+model user {
+  id              Int      @id @default(autoincrement())
+  email           String   @unique
+  firstName       String?
+  lastName        String?
+  created_trials  trial[]  @relation("createdBy")
+  modified_trials trial[]  @relation("modifiedBy")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+enum status {
+  DRAFT
+  IN_REVIEW
+  COMPLETED
+}
