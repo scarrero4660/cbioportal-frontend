@@ -1,10 +1,10 @@
-import EditorTopBar from "../../../components/editor/EditorTopBar";
-import {Ui} from "../../../lib/ui/ui";
+import EditorTopBar from "../../../editor/EditorTopBar";
+import {Ui} from "../../../../lib/ui/ui";
 
 import React from "react";
-import LeftMenuEditorComponent from "../../../components/editor/LeftMenuEditorComponent";
+import LeftMenuEditorComponent from "../../../editor/LeftMenuEditorComponent";
 
-const EditorCreateCtml = () => {
+export const EditorCreateCtml = () => {
 
   const containerStyle: React.CSSProperties = {
     display: 'flex',

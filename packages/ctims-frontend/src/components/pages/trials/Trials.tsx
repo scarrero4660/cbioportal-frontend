@@ -1,27 +1,23 @@
-import styles from './index.module.scss';
+import styles from './Trials.module.scss';
 import { Button } from 'primereact/button';
 import {DataTable, DataTableRowMouseEventParams} from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
-import TopBar from "../../components/trials/TopBar";
+import TopBar from "../../trials/TopBar";
 import {useEffect, useRef, useState} from "react";
-import {useRouter} from "next/router";
 import React from 'react';
 import {Menu} from "primereact/menu";
 
-const Trials = () => {
+export const Trials = () => {
 
   const [trials, setTrials] = useState<any>([]);
   const [rowEntered, setRowEntered] = useState<DataTableRowMouseEventParams>(null);
   const [rowClicked, setRowClicked] = useState<any>(null);
 
-  const router = useRouter();
-
   const menu = useRef(null);
 
   const createCtmlClick = (e) => {
     e.preventDefault();
-    router.push('/trials/create');
   }
 
   const trialMenuItems = [
